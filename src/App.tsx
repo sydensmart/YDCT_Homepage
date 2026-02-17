@@ -46,7 +46,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LanguageProvider>
-          <Router>
+          <Router basename={import.meta.env.BASE_URL}>
             <ScrollToTop />
             <Layout>
             <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
