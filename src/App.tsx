@@ -49,7 +49,7 @@ export default function App() {
           <Router>
             <ScrollToTop />
             <Layout>
-            <Routes>
+            <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
               <Route 
                 path={ROUTE_PATHS.HOME} 
                 element={<Home />} 
