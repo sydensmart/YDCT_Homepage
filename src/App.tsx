@@ -46,49 +46,49 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LanguageProvider>
-          <Router>
+          <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
             <ScrollToTop />
             <Layout>
-            <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-              <Route 
-                path={ROUTE_PATHS.HOME} 
-                element={<Home />} 
-              />
-              <Route 
-                path={ROUTE_PATHS.ABOUT} 
-                element={<About />} 
-              />
-              <Route 
-                path={ROUTE_PATHS.BUSINESS} 
-                element={<Business />} 
-              />
-              <Route 
-                path={ROUTE_PATHS.INSIGHTS} 
-                element={<Insights />} 
-              />
-              <Route 
-                path={ROUTE_PATHS.CONTACT} 
-                element={<Contact />} 
-              />
-              <Route 
-                path={ROUTE_PATHS.PRIVACY} 
-                element={<Privacy />} 
-              />
-              <Route 
-                path={ROUTE_PATHS.SITEMAP} 
-                element={<Sitemap />} 
-              />
-              {/* 정의되지 않은 경로는 홈으로 리다이렉트 */}
-              <Route 
-                path="*" 
-                element={<Home />} 
-              />
-            </Routes>
-          </Layout>
-        </Router>
-        <Toaster />
+              <Routes>
+                <Route 
+                  path={ROUTE_PATHS.HOME} 
+                  element={<Home />} 
+                />
+                <Route 
+                  path={ROUTE_PATHS.ABOUT} 
+                  element={<About />} 
+                />
+                <Route 
+                  path={ROUTE_PATHS.BUSINESS} 
+                  element={<Business />} 
+                />
+                <Route 
+                  path={ROUTE_PATHS.INSIGHTS} 
+                  element={<Insights />} 
+                />
+                <Route 
+                  path={ROUTE_PATHS.CONTACT} 
+                  element={<Contact />} 
+                />
+                <Route 
+                  path={ROUTE_PATHS.PRIVACY} 
+                  element={<Privacy />} 
+                />
+                <Route 
+                  path={ROUTE_PATHS.SITEMAP} 
+                  element={<Sitemap />} 
+                />
+                {/* 정의되지 않은 경로는 홈으로 리다이렉트 */}
+                <Route 
+                  path="*" 
+                  element={<Home />} 
+                />
+              </Routes>
+            </Layout>
+          </Router>
+          <Toaster />
+          <Sonner position="top-right" closeButton />
         </LanguageProvider>
-        <Sonner position="top-right" closeButton />
       </TooltipProvider>
     </QueryClientProvider>
   );

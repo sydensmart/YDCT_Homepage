@@ -227,7 +227,8 @@ export function HashRouter(props: React.ComponentProps<typeof RRD.HashRouter>) {
 }
 
 export function BrowserRouter(props: React.ComponentProps<typeof RRD.BrowserRouter>) {
-  return <RRD.BrowserRouter {...props}>{withBridge(props.children)}</RRD.BrowserRouter>;
+  const basename = props.basename ?? import.meta.env.BASE_URL.replace(/\/$/, '');
+  return <RRD.BrowserRouter {...props} basename={basename}>{withBridge(props.children)}</RRD.BrowserRouter>;
 }
 
 export function MemoryRouter(props: React.ComponentProps<typeof RRD.MemoryRouter>) {
