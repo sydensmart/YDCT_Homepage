@@ -1,7 +1,6 @@
 // Do not edit manually
 
-// Helper to construct image paths that work with Vite's base URL
-const getImagePath = (path: string) => `${import.meta.env.BASE_URL}${path.startsWith('/') ? path.slice(1) : path}`;
+import { getImagePath } from "@/utils/paths";
 
 export const IMAGES = {
   AI_DATA_1: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTk0NTh8MHwxfHNlYXJjaHw1fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MHwwfHx8MTc3MTE2MjcyMXww&ixlib=rb-4.1.0&q=80&w=1080",

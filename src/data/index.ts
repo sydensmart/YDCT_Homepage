@@ -25,9 +25,7 @@ import {
   MajorClient
 } from "@/lib/index";
 import { IMAGES } from "@/assets/images";
-
-// Helper to construct image paths that work with Vite's base URL
-const getImagePath = (path: string) => `${import.meta.env.BASE_URL}${path.startsWith('/') ? path.slice(1) : path}`;
+import { getImagePath } from "@/utils/paths";
 
 export const companyInfo: CompanyInfo = {
   name: "YDCT (Young-Deuk Consulting & Technology)",
