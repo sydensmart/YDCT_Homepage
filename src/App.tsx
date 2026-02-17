@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, DEFAULT_BASENAME } from "react-router-dom";
 import { useEffect } from "react";
 import { ROUTE_PATHS } from "@/lib";
 import { Layout } from "@/components/Layout";
@@ -46,7 +46,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LanguageProvider>
-          <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+          <Router basename={DEFAULT_BASENAME}>
             <ScrollToTop />
             <Layout>
               <Routes>

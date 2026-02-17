@@ -8,6 +8,9 @@ import * as RRD from "react-router-dom-original";
 // @ts-expect-error - This is resolved at runtime by Vite alias
 export * from "react-router-dom-original";
 
+/** Default basename from environment, with trailing slash removed */
+export const DEFAULT_BASENAME = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 /** --------------------- Outbound: route list (once) --------------------- */
 let routesPosted = false;
 
@@ -227,7 +230,7 @@ export function HashRouter(props: React.ComponentProps<typeof RRD.HashRouter>) {
 }
 
 export function BrowserRouter(props: React.ComponentProps<typeof RRD.BrowserRouter>) {
-  const basename = props.basename ?? import.meta.env.BASE_URL.replace(/\/$/, '');
+  const basename = props.basename ?? DEFAULT_BASENAME;
   return <RRD.BrowserRouter {...props} basename={basename}>{withBridge(props.children)}</RRD.BrowserRouter>;
 }
 
