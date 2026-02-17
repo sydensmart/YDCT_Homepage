@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getImagePath } from "@/utils/paths";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -32,7 +33,7 @@ export default function Business() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/business-hero.jpg`}
+            src={getImagePath("images/business-hero.jpg")}
             alt="Business Hero" 
             className="w-full h-full object-cover opacity-30"
           />

@@ -8,6 +8,7 @@ import { services, projects, insights, methodologySteps } from "@/data/index";
 import { ServiceCard, ProjectCard, InsightCard } from "@/components/Cards";
 import { IMAGES } from "@/assets/images";
 import { Button } from "@/components/ui/button";
+import { getImagePath } from "@/utils/paths";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -36,7 +37,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/hero-background.jpg`}
+            src={getImagePath("images/hero-background.jpg")}
             alt="YDCT Business Analytics" 
             className="w-full h-full object-cover object-center"
           />

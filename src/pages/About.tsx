@@ -5,6 +5,7 @@ import { companyInfo, teamMembers } from "@/data/index";
 import { TeamCard } from "@/components/Cards";
 import { IMAGES } from "@/assets/images";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getImagePath } from "@/utils/paths";
 
 export default function About() {
   const { tr, language } = useLanguage();
@@ -113,7 +114,7 @@ export default function About() {
                 <p>{tr('about.ceo.message4')}</p>
               </div>
               <div className="pt-2">
-                <img src={`${import.meta.env.BASE_URL}images/signature.svg`} alt="서영득 서명" className="h-10 opacity-80" />
+                <img src={getImagePath("images/signature.svg")} alt="서영득 서명" className="h-10 opacity-80" />
               </div>
             </motion.div>
           </div>
