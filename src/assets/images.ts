@@ -1,4 +1,5 @@
-// Do not edit manually
+// Auto-generated image URLs - do not edit the IMAGES object manually
+// However, the import statement at the top is manually maintained
 
 import { getImagePath } from "@/utils/paths";
 
