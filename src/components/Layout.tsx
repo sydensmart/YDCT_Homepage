@@ -67,7 +67,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <Link to={ROUTE_PATHS.HOME} className="flex items-center gap-2">
             <img 
-              src="/images/ydct-logo.png" 
+              src={`${import.meta.env.BASE_URL}images/ydct-logo.png`}
               alt="YDCT Logo" 
               className="h-[4.5rem] w-auto object-contain"
             />
