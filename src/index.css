@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+==========================================================================
+【AI HANDOVER NOTE】
+1. DESIGN PHILOSOPHY:
+   - Modern Enterprise Minimalism: Inspired by Apple's clean aesthetics, focusing on high-end professional consulting for AI & DX. The design prioritizes clarity, trust, and technological sophistication.
+   - Visual Style: 'Light-Airy Tech'. Utilizes vast negative space (whitespace), hairline borders (thin grey lines), and soft blue accents to signify intelligence and cloud-native expertise.
+   - Brand Identity: Reflects YDCT's 22-year legacy through stable typography and a 'Corporate Blue' that balances heritage with AI innovation.
+
+2. TYPOGRAPHY:
+   - Sans (Inter + Noto Sans KR): Chosen for global corporate standards and excellent Korean legibility. Use Light/Regular weights for body text to maintain the 'Apple-style' airy feel.
+   - Mono (JetBrains Mono): Reserved for technical data, ITI 7-step methodology steps, and performance metrics to emphasize 'Consulting Engineering' precision.
+
+3. COLOR SYSTEM:
+   - Primary Tone: A bright, professional Blue (Hue 250) representing 'Digital Intelligence'. It is mapped to --primary and --ring for interactive elements.
+   - Neutral Palette: High-brightness backgrounds (oklch L > 0.98) with very low chroma to ensure the 'Thin grey lines' (borders) are visible but non-intrusive.
+   - Semantic Logic: Success uses a mint-leaning green; Destructive uses a soft coral to avoid breaking the calm minimalist aesthetic.
+
+4. USAGE GUIDE:
+   - Layout: Centered container for editorial content, with occasional full-width 'Bento' sections for project portfolios (Hyundai Mobis, SK, etc.).
+   - Effects: Use subtle 'rim-light' (1px inner borders) on cards and 'backdrop-blur' for navigation headers to maintain a sense of layered physicality.
+   - Methodology Display: Use the --chart tokens to distinguish the 7-step consulting phases in minimalist infographics.
+==========================================================================
+*/
+
+:root {
+  /* Typography */
+  --font-sans: Inter, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Radius */
+  --radius: 0.5rem;
+
+  /* Core UI Tokens */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.25 0.02 250);
+  --card: oklch(0.99 0.005 250);
+  --card-foreground: oklch(0.25 0.02 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 250);
+  --primary: oklch(0.55 0.16 250);
+  --primary-foreground: oklch(0.98 0.01 250);
+  --secondary: oklch(0.96 0.01 250);
+  --secondary-foreground: oklch(0.3 0.02 250);
+  --muted: oklch(0.97 0.01 250);
+  --muted-foreground: oklch(0.5 0.02 250);
+  --accent: oklch(0.94 0.03 245);
+  --accent-foreground: oklch(0.3 0.1 250);
+  --destructive: oklch(0.6 0.18 25);
+  --destructive-foreground: oklch(0.98 0.01 25);
+  --border: oklch(0.92 0.01 250);
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.55 0.16 250);
+  
+  /* Chart Tokens */
+  --chart-1: oklch(0.55 0.16 250);
+  --chart-2: oklch(0.65 0.12 210);
+  --chart-3: oklch(0.45 0.1 270);
+  --chart-4: oklch(0.75 0.1 190);
+  --chart-5: oklch(0.85 0.08 230);
+  
+  /* Sidebar Tokens */
+  --sidebar: oklch(0.98 0.005 250);
+  --sidebar-foreground: oklch(0.3 0.02 250);
+  --sidebar-primary: oklch(0.55 0.16 250);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.94 0.02 250);
+  --sidebar-accent-foreground: oklch(0.25 0.1 250);
+  --sidebar-border: oklch(0.92 0.01 250);
+  --sidebar-ring: oklch(0.55 0.16 250);
+}
+
+.dark {
+  --background: oklch(0.14 0.02 255);
+  --foreground: oklch(0.92 0.01 255);
+  --card: oklch(0.18 0.02 255);
+  --card-foreground: oklch(0.92 0.01 255);
+  --popover: oklch(0.14 0.02 255);
+  --popover-foreground: oklch(0.92 0.01 255);
+  --primary: oklch(0.65 0.14 245);
+  --primary-foreground: oklch(0.14 0.02 255);
+  --secondary: oklch(0.22 0.02 255);
+  --secondary-foreground: oklch(0.92 0.01 255);
+  --muted: oklch(0.22 0.02 255);
+  --muted-foreground: oklch(0.65 0.02 255);
+  --accent: oklch(0.25 0.05 245);
+  --accent-foreground: oklch(0.95 0.05 245);
+  --destructive: oklch(0.5 0.15 25);
+  --destructive-foreground: oklch(0.95 0.01 25);
+  --border: oklch(0.25 0.02 255);
+  --input: oklch(0.25 0.02 255);
+  --ring: oklch(0.65 0.14 245);
+  
+  /* Chart Tokens */
+  --chart-1: oklch(0.65 0.14 245);
+  --chart-2: oklch(0.55 0.15 200);
+  --chart-3: oklch(0.75 0.12 180);
+  --chart-4: oklch(0.45 0.15 270);
+  --chart-5: oklch(0.85 0.1 220);
+  
+  /* Sidebar Tokens */
+  --sidebar: oklch(0.12 0.02 255);
+  --sidebar-foreground: oklch(0.85 0.02 255);
+  --sidebar-primary: oklch(0.65 0.14 245);
+  --sidebar-primary-foreground: oklch(0.14 0.02 255);
+  --sidebar-accent: oklch(0.2 0.04 245);
+  --sidebar-accent-foreground: oklch(0.95 0.02 255);
+  --sidebar-border: oklch(0.2 0.02 255);
+  --sidebar-ring: oklch(0.65 0.14 245);
+}
+
+@theme inline {
+  /* Shadcn Core Mapping */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Charts Mapping */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar Mapping */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans min-h-screen;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  code, pre {
+    @apply font-mono;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40;
+  }
+}
