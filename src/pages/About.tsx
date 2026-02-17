@@ -113,7 +113,7 @@ export default function About() {
                 <p>{tr('about.ceo.message4')}</p>
               </div>
               <div className="pt-2">
-                <img src="/signature.png" alt="서영득 서명" className="h-10 opacity-80" />
+                <img src={`${import.meta.env.BASE_URL}images/signature.svg`} alt="서영득 서명" className="h-10 opacity-80" />
               </div>
             </motion.div>
           </div>

@@ -36,7 +36,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-background.jpg" 
+            src={`${import.meta.env.BASE_URL}images/hero-background.jpg`}
             alt="YDCT Business Analytics" 
             className="w-full h-full object-cover object-center"
           />
