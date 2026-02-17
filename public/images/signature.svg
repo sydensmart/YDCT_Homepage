@@ -1,0 +1,12 @@
+<svg width="300" height="80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .signature {
+      font-family: cursive, serif;
+      font-size: 36px;
+      font-style: italic;
+      fill: #333333;
+      opacity: 0.8;
+    }
+  </style>
+  <text x="10" y="50" class="signature">서영득</text>
+</svg>

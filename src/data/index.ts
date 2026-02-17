@@ -25,6 +25,7 @@ import {
   MajorClient
 } from "@/lib/index";
 import { IMAGES } from "@/assets/images";
+import { getImagePath } from "@/utils/paths";
 
 export const companyInfo: CompanyInfo = {
   name: "YDCT (Young-Deuk Consulting & Technology)",
@@ -786,7 +787,7 @@ export const majorClients: MajorClient[] = [
     projects: 1,
     description: "스마트 통합안전 솔루션 개발",
     descriptionEn: "Smart Integrated Safety Solution Development",
-    logo: "/images/clients/raycom.png",
+    logo: getImagePath("images/clients/raycom.png"),
     website: "https://www.raycom.co.kr"
   },
   {
@@ -797,7 +798,7 @@ export const majorClients: MajorClient[] = [
     projects: 1,
     description: "B2C 커머스 플랫폼 구축",
     descriptionEn: "B2C Commerce Platform Implementation",
-    logo: "/images/clients/thehandsome.png",
+    logo: getImagePath("images/clients/thehandsome.png"),
     website: "https://www.thehandsome.com"
   },
   {
@@ -808,7 +809,7 @@ export const majorClients: MajorClient[] = [
     projects: 1,
     description: "X2BEE AI 솔루션 기획 및 설계",
     descriptionEn: "X2BEE AI Solution Planning & Design",
-    logo: "/images/clients/plateer.png",
+    logo: getImagePath("images/clients/plateer.png"),
     website: "https://www.plateer.com"
   },
   {
@@ -819,7 +820,7 @@ export const majorClients: MajorClient[] = [
     projects: 1,
     description: "전자계약구매시스템 구축",
     descriptionEn: "Electronic Contract & Procurement System",
-    logo: "/images/clients/woowahan.png",
+    logo: getImagePath("images/clients/woowahan.png"),
     website: "https://www.woowahan.com"
   },
   {
@@ -830,7 +831,7 @@ export const majorClients: MajorClient[] = [
     projects: 3,
     description: "한화큐셀, 한화에너지, 한화시스템 구매 혁신",
     descriptionEn: "Procurement Innovation for Hanwha Q CELLS, Hanwha Energy, Hanwha Systems",
-    logo: "/images/clients/hanwha.png",
+    logo: getImagePath("images/clients/hanwha.png"),
     website: "https://www.hanwha.com"
   },
   {
@@ -841,7 +842,7 @@ export const majorClients: MajorClient[] = [
     projects: 3,
     description: "LG화학, LG디스플레이, LG전자 구매 PI",
     descriptionEn: "Procurement PI for LG Chem, LG Display, LG Electronics",
-    logo: "/images/clients/lg.png",
+    logo: getImagePath("images/clients/lg.png"),
     website: "https://www.lg.com"
   },
   {
@@ -852,7 +853,7 @@ export const majorClients: MajorClient[] = [
     projects: 1,
     description: "삼성엔지니어링 PI 컨설팅",
     descriptionEn: "PI Consulting for Samsung Engineering",
-    logo: "/images/clients/samsung.png",
+    logo: getImagePath("images/clients/samsung.png"),
     website: "https://www.samsung.com"
   },
   {
@@ -863,7 +864,7 @@ export const majorClients: MajorClient[] = [
     projects: 3,
     description: "SK(주), SK텔레콤, SK C&C 구매 및 SCM 혁신",
     descriptionEn: "Procurement & SCM Innovation for SK, SK Telecom, SK C&C",
-    logo: "/images/clients/sk.png",
+    logo: getImagePath("images/clients/sk.png"),
     website: "https://www.sk.com"
   },
   {
@@ -874,7 +875,7 @@ export const majorClients: MajorClient[] = [
     projects: 4,
     description: "현대모비스, 한온시스템, 만도 구매 및 협력사 관리",
     descriptionEn: "Procurement & Vendor Management for Hyundai Mobis, Hanon Systems, Mando",
-    logo: "/images/clients/hyundai.png",
+    logo: getImagePath("images/clients/hyundai.png"),
     website: "https://www.hyundai.com"
   },
   {
@@ -885,7 +886,7 @@ export const majorClients: MajorClient[] = [
     projects: 3,
     description: "두산인프라코어, 두산메카텍 구매 혁신",
     descriptionEn: "Procurement Innovation for Doosan Infracore, Doosan Mecatec",
-    logo: "/images/clients/doosan.png",
+    logo: getImagePath("images/clients/doosan.png"),
     website: "https://www.doosan.com"
   },
   {
@@ -896,7 +897,7 @@ export const majorClients: MajorClient[] = [
     projects: 3,
     description: "포스코, 포스코ICT, 포스데이터 구매 혁신",
     descriptionEn: "Procurement Innovation for POSCO, POSCO ICT, POSCO Data",
-    logo: "/images/clients/posco.png",
+    logo: getImagePath("images/clients/posco.png"),
     website: "https://www.posco.com"
   },
   {
@@ -907,7 +908,7 @@ export const majorClients: MajorClient[] = [
     projects: 1,
     description: "협력사 정보동기화 시스템 구축",
     descriptionEn: "Vendor Information Synchronization System Implementation",
-    logo: "/images/clients/amorepacific.png",
+    logo: getImagePath("images/clients/amorepacific.png"),
     website: "https://www.apgroup.com"
   }
 ];
@@ -954,7 +955,7 @@ export const teamMembers: TeamMember[] = [
       "Strategic PI Methodology-based Business Modeling",
       "SCM Innovation PI Methodology-based SRM Consulting"
     ],
-    image: "/images/ceo-profile.jpg"
+    image: getImagePath("images/ceo-profile.jpg")
   }
 ];
 
