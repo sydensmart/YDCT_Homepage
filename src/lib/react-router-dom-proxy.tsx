@@ -9,7 +9,7 @@ import * as RRD from "react-router-dom-original";
 export * from "react-router-dom-original";
 
 /** Default basename from environment, with trailing slash removed */
-export const DEFAULT_BASENAME = import.meta.env.BASE_URL.replace(/\/$/, '');
+export const DEFAULT_BASENAME = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
 
 /** --------------------- Outbound: route list (once) --------------------- */
 let routesPosted = false;
