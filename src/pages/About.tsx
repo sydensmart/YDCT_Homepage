@@ -76,38 +76,20 @@ export default function About() {
       {/* CEO Message Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-border mx-auto"
-              style={{ maxWidth: '50%' }}
-            >
-              <img 
-                src={ceo.image || IMAGES.TEAM_WORK_1} 
-                alt="CEO 서영득"
-                className="w-full h-full object-cover grayscale"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
-                <p className="text-2xl font-bold">{tr('about.ceo.name')}</p>
-                <p className="text-sm text-slate-300">{tr('about.ceo.position')}</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="space-y-6"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium">
                 <Quote className="w-3.5 h-3.5" /> {tr('about.ceo.badge')}
               </div>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                 "{tr('about.ceo.quote')}"
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-base">
+              <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
                 <p>{tr('about.ceo.message1')}</p>
                 <p>{tr('about.ceo.message2')}</p>
                 <p>{tr('about.ceo.message3')}</p>

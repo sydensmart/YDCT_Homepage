@@ -44,7 +44,7 @@ export default function Insights() {
           <img 
             src={IMAGES.TEAM_WORK_3} 
             alt="Team Collaboration" 
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         </div>

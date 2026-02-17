@@ -156,7 +156,7 @@ export default function Contact() {
     <div className="flex flex-col w-full min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 bg-muted/30 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute inset-0 z-0 opacity-30">
           <img
             src={IMAGES.CORPORATE_1}
             alt="Contact Background"
